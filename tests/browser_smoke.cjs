@@ -74,7 +74,19 @@ let browser;
     await page.click("#closeDialog");
     await page.click("#menuToggle");
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
+    await page.evaluate(() => {
+      window.__navClicks = [];
+      document.querySelector('#siteNav a[href="#worlds"]').addEventListener('click', () => window.__navClicks.push("anchor-click"), {capture:true});
+      document.querySelector('#siteNav').addEventListener('click', () => window.__navClicks.push("nav-click"), {capture:true});
+      document.querySelector('#menuToggle').addEventListener('click', () => window.__navClicks.push("button-click"), {capture:true});
+    });
     await page.click('#siteNav a[href="#worlds"]');
+    console.log("MOBILE NAV DIAGNOSTICS", await page.evaluate(() => ({
+      hash: location.hash, clicks: window.__navClicks,
+      open: document.querySelector('#siteNav').classList.contains('open'),
+      dialogOpen: document.querySelector('#secretDialog').open,
+      expanded: document.querySelector('#menuToggle').getAttribute('aria-expanded'),
+    })));
     await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), { timeout: 2500 });
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
