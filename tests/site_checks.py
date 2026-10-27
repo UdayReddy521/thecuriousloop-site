@@ -84,10 +84,16 @@ def main():
     for letter in "YUVAN":
         assert html.count(f'data-letter="{letter}"') == 1, f"Missing or duplicate secret letter {letter}"
     assert "Uday Reddy" in html, "Founder must be credited"
-    assert '<h2 id="yuvanDedicationTitle" class="dedication-name">YUVAN' in html, "YUVAN must be visible, not just a hidden easter egg"
-    for word in ("OUNG", "NIVERSE", "AST", "DVENTURES", "EVER-ENDING WONDER."):
-        assert word in html, f"Missing YUVAN dedication phrase: {word}"
-    assert 'href="#secret"' in html, "Visible dedication must link to the constellation hunt"
+    # Keep the dedication secret until someone taps "Reveal" or finds the five stars.
+    public_page = html.split('<dialog id="secretDialog"', 1)[0]
+    assert '<strong>STAR QUEST</strong>' in public_page
+    assert 'FIVE HIDDEN STARS · ONE SECRET CONSTELLATION' in public_page
+    assert '<h2 id="yuvanDedicationTitle" class="dedication-name quest-name">STAR QUEST' in public_page
+    assert "YUVAN" not in public_page, "Do not spoil the name in the visible homepage"
+    assert "YOUNG UNIVERSE" not in public_page, "Do not spoil the secret phrase"
+    assert '<div class="reveal-word" id="revealTitle">Y U V A N</div>' in html
+    assert "Young Universe. Vast Adventures. Never-ending wonder." in html
+    assert 'href="#secret"' in html, "Challenge teaser must link to the constellation hunt"
     assert "MiraVana Studio" in html and "The Curious Loop" in html
     assert "UCuSK43WMaBRN-ULvEVeSSIw" in html
     assert "UCpSeEHYHZd1C1oki8TIVPHA" in html
