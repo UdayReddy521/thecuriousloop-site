@@ -76,6 +76,9 @@ def main():
         "transparency", "secret", "contact", "starGame", "gameScore",
         "gameTime", "gameOverlay", "startGame", "restartGame",
         "secretDialog", "puzzleStatus", "yuvanDedicationTitle",
+        "questTitle", "questMap", "questStage", "questCompleted",
+        "questLive", "questProgressBar", "questProgressFill", "questCounter",
+        "questReset", "questReplay", "closeQuestCompleted",
     )
     for identifier in must_have:
         assert identifier in homepage.ids, f"Missing interactive element #{identifier}"
@@ -91,13 +94,20 @@ def main():
     assert '<h2 id="yuvanDedicationTitle" class="dedication-name quest-name">STAR QUEST' in public_page
     assert "YUVAN" not in public_page, "Do not spoil the name in the visible homepage"
     assert "YOUNG UNIVERSE" not in public_page, "Do not spoil the secret phrase"
-    assert '<div class="reveal-word" id="revealTitle">Y U V A N</div>' in html
+    assert '<div class="reveal-word" id="revealTitle"' in html
     assert "Young Universe. Vast Adventures. Never-ending wonder." in html
+    assert html.count('class="quest-star"') == 5, "Five interactive stars required"
+    assert html.count('data-quest-line=') == 4, "Four animated connections required"
+    assert '<script src="/quest.js" defer></script>' in html
     assert 'href="#secret"' in html, "Challenge teaser must link to the constellation hunt"
     assert "MiraVana Studio" in html and "The Curious Loop" in html
     assert "UCuSK43WMaBRN-ULvEVeSSIw" in html
     assert "UCpSeEHYHZd1C1oki8TIVPHA" in html
     assert "https://thecuriousloop.in/" in html
+    quest = (ROOT / "quest.js").read_text(encoding="utf-8")
+    for phrase in ("arcadeResult", "aria-valuenow", "prefers-reduced-motion", "questReplay"):
+        assert phrase in quest, f"Quest interaction missing: {phrase}"
+    assert not any(x in quest for x in ("localStorage", "sendBeacon", "fetch(", "geolocation"))
     script = (ROOT / "script.js").read_text(encoding="utf-8")
     assert "requestAnimationFrame" in script and "canvas.getContext" in script
     assert "ArrowLeft" in script and "pointerdown" in script
