@@ -75,6 +75,7 @@ let browser;
     await page.click("#menuToggle");
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
     await page.click('#siteNav a[href="#worlds"]');
+    await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), { timeout: 2500 });
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
     await page.goto("http://127.0.0.1:8765/privacy.html", {waitUntil:"domcontentloaded"});
