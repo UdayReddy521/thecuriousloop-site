@@ -27,6 +27,21 @@ let browser;
     assert.equal(await page.$eval("#founder", el => el.textContent.includes("Uday Reddy")), true);
     assert.equal(await page.$eval("#panel-science", el => el.hidden), false);
 
+    // Visible at the TOP of the page, no need to guess which tiny stars to click.
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("YUVAN")), true);
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("NEVER-ENDING WONDER")), true);
+    await page.click("#topReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    assert.match(await page.$eval("#revealTitle", el => el.textContent), /Y U V A N/);
+    await page.click("#closeDialog");
+    await page.click("#revealYuvan");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    await page.click("#closeDialog");
+    await page.click("#planetReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    await page.click("#closeDialog");
+    console.log("PASS: Top YUVAN ribbon, dedication button and interactive planet all open the surprise");
+
     await page.click("#tab-tech");
     assert.equal(await page.$eval("#tab-tech", el => el.getAttribute("aria-selected")), "true");
     assert.equal(await page.$eval("#panel-tech", el => el.hidden), false);
@@ -53,6 +68,10 @@ let browser;
     await page.setViewport({width: 390, height: 844, deviceScaleFactor: 1, isMobile: true, hasTouch: true});
     await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
+    assert.equal(await page.$eval(".constellation-banner", el => el.getBoundingClientRect().top < window.innerHeight), true);
+    await page.click("#topReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile YUVAN reveal must be usable");
+    await page.click("#closeDialog");
     await page.click("#menuToggle");
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
     await page.click('#siteNav a[href="#worlds"]');
