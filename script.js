@@ -110,81 +110,7 @@
     });
   });
 
-  // Five discrete hidden stars in reading order spell a secret name.
-  // No user data, names or game results are transmitted or stored.
-  const letters = ["Y", "U", "V", "A", "N"];
-  const discovered = new Set();
-  const slots = Array.from(document.querySelectorAll(".constellation-slot"));
-  const status = $("puzzleStatus");
-  const secretDialog = $("secretDialog");
-  const closeDialog = $("closeDialog");
-  const hint = $("puzzleHint");
-  const hints = [
-    "First clue: look for a small star near the giant planet at the top.",
-    "Second clue: a little star is tucked in The Curious Loop's card.",
-    "Third clue: follow the field notes near the discovery topics.",
-    "Fourth clue: the space arcade has more than one star.",
-    "Last clue: discover a little sparkle near our promise to create responsibly."
-  ];
-  function showSecret() {
-    if (secretDialog && typeof secretDialog.showModal === "function") {
-      secretDialog.showModal();
-      if (closeDialog) closeDialog.focus();
-    } else {
-      alert("Y U V A N — Young Universe. Vast Adventures. Never-ending wonder.");
-    }
-  }
-  // The surprise must also be discoverable without pixel-hunting for stars.
-  // All four plainly-labeled buttons reveal the same accessible dialog.
-  ["topReveal", "revealYuvan", "planetReveal", "puzzleReveal"].forEach((id) => {
-    const button = $(id);
-    if (button) button.addEventListener("click", showSecret);
-  });
-
-  document.querySelectorAll(".hidden-spark[data-letter]").forEach((button) => {
-    const letter = button.dataset.letter;
-    if (!letters.includes(letter)) return;
-    button.addEventListener("click", () => {
-      if (discovered.has(letter)) return;
-      discovered.add(letter);
-      button.classList.add("discovered");
-      button.setAttribute("aria-label", "Discovered constellation star " + letter);
-      button.title = "A star in the constellation!";
-      const index = letters.indexOf(letter);
-      if (slots[index]) {
-        slots[index].classList.add("found");
-        slots[index].textContent = letter;
-      }
-      if (status) {
-        status.textContent = discovered.size === 5 ?
-          "5 of 5 stars discovered • Constellation complete!" :
-          discovered.size + " of 5 stars discovered • Keep exploring";
-      }
-      if (hint && !hint.hidden) {
-        const next = letters.findIndex((item) => !discovered.has(item));
-        hint.textContent = hints[Math.max(next, 0)] || "You found them all!";
-      }
-      if (discovered.size === 5) showSecret();
-    });
-  });
-  if ($("hintButton")) {
-    $("hintButton").addEventListener("click", () => {
-      const next = letters.findIndex((item) => !discovered.has(item));
-      if (hint) {
-        hint.textContent = next < 0 ? "All stars discovered. The constellation is complete!" : hints[next];
-        hint.hidden = !hint.hidden;
-      }
-      $("hintButton").textContent = hint && !hint.hidden ? "Hide clue ↑" : "Need a clue? ↗";
-    });
-  }
-  if (secretDialog) {
-    [closeDialog, $("closeDialogX")].filter(Boolean).forEach((control) =>
-      control.addEventListener("click", () => secretDialog.close())
-    );
-    secretDialog.addEventListener("click", (event) => {
-      if (event.target === secretDialog) secretDialog.close();
-    });
-  }
+  // Star Quest lives in quest.js; the arcade can award a bonus star.
 
   // STAR CATCHER — actual playable canvas game, not a static animation.
   const canvas = $("starGame");
@@ -232,7 +158,11 @@
     updateCounters();
     if (overlay) overlay.hidden = false;
     if (overlayTitle) overlayTitle.textContent = score >= 100 ? "Cosmic superstar! ✦" : "Beautiful star catching! ✧";
-    if (overlayDesc) overlayDesc.textContent = "You collected " + score + " points. Another adventure?";
+    const earned = window.starQuest?.arcadeResult?.(score) || false;
+    if (overlayDesc) overlayDesc.textContent =
+      "You collected " + score + " points." +
+      (earned ? " ✦ You also earned a bonus Star Quest star!" : "") +
+      " Another adventure?";
     if (launch) launch.textContent = "Play again ↗";
   }
   function spawn() {
