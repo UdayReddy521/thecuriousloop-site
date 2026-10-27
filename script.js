@@ -177,8 +177,10 @@
       $("hintButton").textContent = hint && !hint.hidden ? "Hide clue ↑" : "Need a clue? ↗";
     });
   }
-  if (closeDialog && secretDialog) {
-    closeDialog.addEventListener("click", () => secretDialog.close());
+  if (secretDialog) {
+    [closeDialog, $("closeDialogX")].filter(Boolean).forEach((control) =>
+      control.addEventListener("click", () => secretDialog.close())
+    );
     secretDialog.addEventListener("click", (event) => {
       if (event.target === secretDialog) secretDialog.close();
     });
