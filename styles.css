@@ -504,3 +504,9 @@ h1 em,h2 em{font-style:normal;color:var(--purple)}
   .banner-text span{font-size:.47rem}
   .planet-reveal-button{font-size:.5rem}
 }
+
+/* Keep expanded mobile navigation pinned in the viewport during smooth
+   scrolling and after dismissing a surprise dialog. */
+@media(max-width:800px){
+  .site-nav:not(.legal-nav){position:fixed;top:74px;left:0;right:0;}
+}
