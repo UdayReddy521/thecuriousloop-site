@@ -78,7 +78,18 @@ let browser;
     await page.click("#topReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile YUVAN reveal must be usable");
     await pause(350); // allow smooth scroll to settle after navigating back from #worlds
+    await page.evaluate(() => {
+      window.__modalEvents=[];
+      document.querySelector("#closeDialog").addEventListener("click",()=>window.__modalEvents.push("button clicked"),true);
+      document.querySelector("#secretDialog").addEventListener("click",(event)=>window.__modalEvents.push("dialog target:"+event.target.id+"/"+event.target.tagName),true);
+    });
+    console.log("MODAL BEFORE", await page.evaluate(() => {
+      const r=document.querySelector("#closeDialog").getBoundingClientRect();
+      const el=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);
+      return {rect:{x:r.x,y:r.y,w:r.width,h:r.height},hit:el?.outerHTML?.slice(0,190),dialogOpen:document.querySelector("#secretDialog").open,scrollY:scrollY};
+    }));
     await page.click("#closeDialog");
+    console.log("MODAL AFTER", await page.evaluate(() => ({events:window.__modalEvents,dialogOpen:document.querySelector("#secretDialog").open,scrollY:scrollY})));
     await page.waitForFunction(() => !document.getElementById("secretDialog").open, {timeout: 3000});
     assert.equal(await page.$eval("#secretDialog", el => el.open), false);
     console.log("PASS: Mobile YUVAN banner button opens and closes the surprise");
