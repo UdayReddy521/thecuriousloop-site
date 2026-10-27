@@ -42,6 +42,9 @@
       menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     });
     navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    // Anchor navigation can scroll before the click promise settles on touch browsers.
+    // Also close after the hash changes to cover browser and keyboard navigation.
+    window.addEventListener("hashchange", closeMenu);
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
     });
