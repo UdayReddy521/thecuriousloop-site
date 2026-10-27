@@ -11,6 +11,7 @@ on:
       - "favicon.svg"
       - "social-preview.svg"
       - "tests/site_checks.py"
+      - "tests/browser_smoke.cjs"
       - ".github/workflows/site-quality.yml"
   push:
     branches: [main]
@@ -42,3 +43,12 @@ jobs:
         run: node --check script.js
       - name: Pages, navigation, accessibility and mini-game asset checks
         run: python tests/site_checks.py
+      - name: Verify Chrome is present
+        run: |
+          CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME_BIN"
+          echo "CHROME_BIN=$CHROME_BIN" >> "$GITHUB_ENV"
+      - name: Install headless-browser test driver
+        run: npm install --no-save --no-package-lock puppeteer-core@24.26.1
+      - name: Real browser interaction smoke test
+        run: node tests/browser_smoke.cjs
