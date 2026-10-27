@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<defs><radialGradient id="bg" cx=".7" cy=".37" r=".85"><stop stop-color="#3d286a"/><stop offset=".65" stop-color="#12152e"/><stop offset="1" stop-color="#080d1b"/></radialGradient><radialGradient id="planet" cx=".24" cy=".15"><stop stop-color="#ecd2ff"/><stop offset=".4" stop-color="#a78cf4"/><stop offset="1" stop-color="#261854"/></radialGradient><linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fccce6"/><stop offset=".6" stop-color="#b9a2ff"/><stop offset="1" stop-color="#8fdaf9"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g opacity=".6" fill="#fff"><circle cx="86" cy="85" r="2"/><circle cx="180" cy="156" r="2"/><circle cx="705" cy="102" r="3"/><circle cx="935" cy="84" r="2"/><circle cx="1056" cy="450" r="3"/><circle cx="510" cy="534" r="2"/><circle cx="975" cy="252" r="2"/></g>
+<ellipse cx="910" cy="326" rx="265" ry="112" transform="rotate(-26 910 326)" fill="none" stroke="#987eca" stroke-width="3" opacity=".55"/>
+<circle cx="910" cy="326" r="195" fill="url(#planet)"/>
+<ellipse cx="910" cy="326" rx="236" ry="67" transform="rotate(-26 910 326)" fill="none" stroke="#dfbcfb" stroke-width="15" opacity=".86"/>
+<circle cx="1053" cy="112" r="6" fill="#f6dbbb"/><circle cx="698" cy="482" r="5" fill="#72eaf5"/>
+<text x="82" y="125" font-family="Arial,sans-serif" font-weight="bold" font-size="24" fill="#7ae6fc" letter-spacing="6">THE CURIOUS LOOP</text>
+<text x="76" y="294" font-family="Arial,sans-serif" font-weight="bold" font-size="85" fill="#ffffff">Stay wonderfully</text>
+<text x="77" y="396" font-family="Arial,sans-serif" font-weight="bold" font-size="107" fill="url(#title)">curious.</text>
+<text x="82" y="495" font-family="Arial,sans-serif" font-size="27" fill="#c9c8e2">SCIENCE  ✦  AI &amp; TECH  ✦  LITTLE STORIES</text>
+</svg>
