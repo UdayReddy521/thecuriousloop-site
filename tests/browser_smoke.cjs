@@ -97,6 +97,9 @@ let browser;
     await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), {timeout: 3000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
+    // Test the quest from a fresh, top-of-page mobile visit; hash scrolling
+    // from the previous navigation check should not interfere with tapping.
+    await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
     await page.click("#topReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile Star Quest must open");
     assert.equal(await page.$eval("#questStage", el => el.hidden), false, "Mobile quest starts hidden-name stage");
