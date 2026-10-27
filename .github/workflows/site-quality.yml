@@ -6,6 +6,7 @@ on:
       - "index.html"
       - "styles.css"
       - "script.js"
+      - "quest.js"
       - "privacy.html"
       - "terms.html"
       - "favicon.svg"
@@ -19,9 +20,12 @@ on:
       - "index.html"
       - "styles.css"
       - "script.js"
+      - "quest.js"
       - "privacy.html"
       - "terms.html"
       - "tests/site_checks.py"
+      - "tests/browser_smoke.cjs"
+      - ".github/workflows/site-quality.yml"
   workflow_dispatch:
 
 permissions:
@@ -40,7 +44,9 @@ jobs:
         with:
           node-version: "22"
       - name: JavaScript syntax validation
-        run: node --check script.js
+        run: |
+          node --check script.js
+          node --check quest.js
       - name: Pages, navigation, accessibility and mini-game asset checks
         run: python tests/site_checks.py
       - name: Verify Chrome is present
