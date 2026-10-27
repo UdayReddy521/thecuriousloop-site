@@ -1,0 +1,44 @@
+name: Wonderverse Site Quality
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "styles.css"
+      - "script.js"
+      - "privacy.html"
+      - "terms.html"
+      - "favicon.svg"
+      - "social-preview.svg"
+      - "tests/site_checks.py"
+      - ".github/workflows/site-quality.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "styles.css"
+      - "script.js"
+      - "privacy.html"
+      - "terms.html"
+      - "tests/site_checks.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-site-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: JavaScript syntax validation
+        run: node --check script.js
+      - name: Pages, navigation, accessibility and mini-game asset checks
+        run: python tests/site_checks.py
