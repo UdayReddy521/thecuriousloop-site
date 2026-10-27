@@ -510,3 +510,27 @@ h1 em,h2 em{font-style:normal;color:var(--purple)}
 @media(max-width:800px){
   .site-nav:not(.legal-nav){position:fixed;top:74px;left:0;right:0;}
 }
+
+/* Keep the actual YUVAN modal contained within the viewport at high zoom
+   and on small phones. A close button remains accessible in the top corner. */
+.secret-dialog{
+  position:fixed;max-height:calc(100dvh - 36px);
+  overflow-y:auto;overscroll-behavior:contain;
+}
+.dialog-close-x{
+  position:sticky;top:0;left:100%;
+  display:grid;place-items:center;
+  width:42px;height:42px;margin:-8px -6px -15px auto;z-index:2;
+  border:1px solid rgba(229,208,255,.48);
+  border-radius:50%;background:rgba(36,30,73,.94);
+  color:white;font-size:1.7rem;line-height:1;cursor:pointer;
+}
+.dialog-close-x:hover{background:#65539e}
+.dialog-close-x:focus-visible{outline:3px solid #8af2ff;outline-offset:3px}
+@media(max-width:640px){
+  .secret-dialog{width:calc(100% - 28px);max-height:calc(100dvh - 28px);padding:12px}
+  .dialog-content{padding:12px 8px 20px}
+  .dialog-content .reveal-word{font-size:clamp(2.4rem,11vw,3.5rem);letter-spacing:.09em}
+  .dialog-content .section-kicker{margin-bottom:7px}
+  .dialog-content .reveal-subline{margin-bottom:16px}
+}
