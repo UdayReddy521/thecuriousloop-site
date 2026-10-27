@@ -534,3 +534,19 @@ h1 em,h2 em{font-style:normal;color:var(--purple)}
   .dialog-content .section-kicker{margin-bottom:7px}
   .dialog-content .reveal-subline{margin-bottom:16px}
 }
+
+/* Keep the new game teaser on one elegant line without a large title overflowing
+   the dedication card on smaller screens. */
+.hero-dedication .dedication-name.quest-name{
+  font-size:clamp(2.0rem,3.35vw,3.25rem);
+  letter-spacing:.075em;
+  white-space:normal;
+  overflow-wrap:normal;
+  line-height:1.17;
+}
+@media(max-width:640px){
+  .hero-dedication .dedication-name.quest-name{
+    font-size:clamp(1.85rem,8vw,2.8rem);
+    letter-spacing:.055em;
+  }
+}
