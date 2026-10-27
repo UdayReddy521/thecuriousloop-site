@@ -131,6 +131,13 @@
       alert("Y U V A N — Young Universe. Vast Adventures. Never-ending wonder.");
     }
   }
+  // The surprise must also be discoverable without pixel-hunting for stars.
+  // All four plainly-labeled buttons reveal the same accessible dialog.
+  ["topReveal", "revealYuvan", "planetReveal", "puzzleReveal"].forEach((id) => {
+    const button = $(id);
+    if (button) button.addEventListener("click", showSecret);
+  });
+
   document.querySelectorAll(".hidden-spark[data-letter]").forEach((button) => {
     const letter = button.dataset.letter;
     if (!letters.includes(letter)) return;
