@@ -87,6 +87,8 @@ let browser;
     assert.equal(await page.$eval("#secretDialog", el => el.open), false);
     console.log("PASS: On-page hidden stars + optional Star Catcher reward share quest progression");
 
+    // Stable pointer events and reduced-motion accessibility at mobile width.
+    await page.emulateMediaFeatures([{name: "prefers-reduced-motion", value: "reduce"}]);
     await page.setViewport({width: 390, height: 844, deviceScaleFactor: 1, isMobile: true, hasTouch: true});
     await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
@@ -99,8 +101,11 @@ let browser;
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
     // Test the quest from a fresh, top-of-page mobile visit; hash scrolling
     // from the previous navigation check should not interfere with tapping.
-    await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
-    await page.click("#topReveal");
+    await page.goto("http://127.0.0.1:8765/", {waitUntil:"networkidle2",timeout:25000});
+    await page.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; window.scrollTo(0, 0); });
+    await page.waitForFunction(() => window.scrollY === 0 && typeof window.starQuest?.progress === "function", {timeout:3000});
+    await page.locator("#topReveal").click();
+    await page.waitForFunction(() => document.getElementById("secretDialog").open, {timeout:3000});
     assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile Star Quest must open");
     assert.equal(await page.$eval("#questStage", el => el.hidden), false, "Mobile quest starts hidden-name stage");
     await page.click('[data-star-index="0"]');
