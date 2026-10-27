@@ -69,27 +69,17 @@ let browser;
     await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
     assert.equal(await page.$eval(".constellation-banner", el => el.getBoundingClientRect().top < window.innerHeight), true);
+    await page.click("#menuToggle");
+    assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
+    await page.click('#siteNav a[href="#worlds"]');
+    await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), {timeout: 3000});
+    assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
+    console.log("PASS: Mobile viewport, opening and closing accessible navigation");
     await page.click("#topReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile YUVAN reveal must be usable");
     await page.click("#closeDialog");
-    await page.click("#menuToggle");
-    assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
-    await page.evaluate(() => {
-      window.__navClicks = [];
-      document.querySelector('#siteNav a[href="#worlds"]').addEventListener('click', () => window.__navClicks.push("anchor-click"), {capture:true});
-      document.querySelector('#siteNav').addEventListener('click', () => window.__navClicks.push("nav-click"), {capture:true});
-      document.querySelector('#menuToggle').addEventListener('click', () => window.__navClicks.push("button-click"), {capture:true});
-    });
-    await page.click('#siteNav a[href="#worlds"]');
-    console.log("MOBILE NAV DIAGNOSTICS", await page.evaluate(() => ({
-      hash: location.hash, clicks: window.__navClicks,
-      open: document.querySelector('#siteNav').classList.contains('open'),
-      dialogOpen: document.querySelector('#secretDialog').open,
-      expanded: document.querySelector('#menuToggle').getAttribute('aria-expanded'),
-    })));
-    await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), { timeout: 2500 });
-    assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
-    console.log("PASS: Mobile viewport, opening and closing accessible navigation");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), false);
+    console.log("PASS: Mobile YUVAN banner button opens and closes the surprise");
     await page.goto("http://127.0.0.1:8765/privacy.html", {waitUntil:"domcontentloaded"});
     assert.match(await page.title(), /Privacy Policy/);
     await page.goto("http://127.0.0.1:8765/terms.html", {waitUntil:"domcontentloaded"});
