@@ -75,7 +75,7 @@ def main():
         "heroTitle", "worlds", "discover", "play", "studio", "founder",
         "transparency", "secret", "contact", "starGame", "gameScore",
         "gameTime", "gameOverlay", "startGame", "restartGame",
-        "secretDialog", "puzzleStatus",
+        "secretDialog", "puzzleStatus", "yuvanDedicationTitle",
     )
     for identifier in must_have:
         assert identifier in homepage.ids, f"Missing interactive element #{identifier}"
@@ -84,6 +84,10 @@ def main():
     for letter in "YUVAN":
         assert html.count(f'data-letter="{letter}"') == 1, f"Missing or duplicate secret letter {letter}"
     assert "Uday Reddy" in html, "Founder must be credited"
+    assert '<h2 id="yuvanDedicationTitle" class="dedication-name">YUVAN' in html, "YUVAN must be visible, not just a hidden easter egg"
+    for word in ("OUNG", "NIVERSE", "AST", "DVENTURES", "EVER-ENDING WONDER."):
+        assert word in html, f"Missing YUVAN dedication phrase: {word}"
+    assert 'href="#secret"' in html, "Visible dedication must link to the constellation hunt"
     assert "MiraVana Studio" in html and "The Curious Loop" in html
     assert "UCuSK43WMaBRN-ULvEVeSSIw" in html
     assert "UCpSeEHYHZd1C1oki8TIVPHA" in html

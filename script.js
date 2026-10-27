@@ -42,6 +42,9 @@
       menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     });
     navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    // Anchor navigation can scroll before the click promise settles on touch browsers.
+    // Also close after the hash changes to cover browser and keyboard navigation.
+    window.addEventListener("hashchange", closeMenu);
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
     });
@@ -131,6 +134,13 @@
       alert("Y U V A N — Young Universe. Vast Adventures. Never-ending wonder.");
     }
   }
+  // The surprise must also be discoverable without pixel-hunting for stars.
+  // All four plainly-labeled buttons reveal the same accessible dialog.
+  ["topReveal", "revealYuvan", "planetReveal", "puzzleReveal"].forEach((id) => {
+    const button = $(id);
+    if (button) button.addEventListener("click", showSecret);
+  });
+
   document.querySelectorAll(".hidden-spark[data-letter]").forEach((button) => {
     const letter = button.dataset.letter;
     if (!letters.includes(letter)) return;
@@ -167,8 +177,10 @@
       $("hintButton").textContent = hint && !hint.hidden ? "Hide clue ↑" : "Need a clue? ↗";
     });
   }
-  if (closeDialog && secretDialog) {
-    closeDialog.addEventListener("click", () => secretDialog.close());
+  if (secretDialog) {
+    [closeDialog, $("closeDialogX")].filter(Boolean).forEach((control) =>
+      control.addEventListener("click", () => secretDialog.close())
+    );
     secretDialog.addEventListener("click", (event) => {
       if (event.target === secretDialog) secretDialog.close();
     });

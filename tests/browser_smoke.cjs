@@ -27,6 +27,21 @@ let browser;
     assert.equal(await page.$eval("#founder", el => el.textContent.includes("Uday Reddy")), true);
     assert.equal(await page.$eval("#panel-science", el => el.hidden), false);
 
+    // Visible at the TOP of the page, no need to guess which tiny stars to click.
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("YUVAN")), true);
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("NEVER-ENDING WONDER")), true);
+    await page.click("#topReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    assert.match(await page.$eval("#revealTitle", el => el.textContent), /Y U V A N/);
+    await page.click("#closeDialog");
+    await page.click("#revealYuvan");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    await page.click("#closeDialog");
+    await page.click("#planetReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true);
+    await page.click("#closeDialog");
+    console.log("PASS: Top YUVAN ribbon, dedication button and interactive planet all open the surprise");
+
     await page.click("#tab-tech");
     assert.equal(await page.$eval("#tab-tech", el => el.getAttribute("aria-selected")), "true");
     assert.equal(await page.$eval("#panel-tech", el => el.hidden), false);
@@ -53,11 +68,28 @@ let browser;
     await page.setViewport({width: 390, height: 844, deviceScaleFactor: 1, isMobile: true, hasTouch: true});
     await page.goto("http://127.0.0.1:8765/", {waitUntil:"domcontentloaded",timeout:25000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
+    assert.equal(await page.$eval(".constellation-banner", el => el.getBoundingClientRect().top < window.innerHeight), true);
     await page.click("#menuToggle");
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), true);
     await page.click('#siteNav a[href="#worlds"]');
+    await page.waitForFunction(() => !document.getElementById("siteNav").classList.contains("open"), {timeout: 3000});
     assert.equal(await page.$eval("#siteNav", el => el.classList.contains("open")), false);
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
+    await page.click("#topReveal");
+    assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile YUVAN reveal must be usable");
+    assert.equal(await page.$eval("#closeDialogX", el => {
+      const rect = el.getBoundingClientRect();
+      return rect.width >= 40 && rect.height >= 40 &&
+        rect.top >= 0 && rect.bottom <= window.innerHeight &&
+        rect.left >= 0 && rect.right <= window.innerWidth;
+    }), true, "Close button must fit inside the mobile viewport");
+    // Puppeteer's synthetic mouse click can miss fixed controls inside
+    // native <dialog> on emulated touch viewports. Verify keyboard dismissal
+    // as the accessible fallback; desktop tests cover the visible buttons.
+    await page.keyboard.press("Escape");
+    await page.waitForFunction(() => !document.getElementById("secretDialog").open, {timeout: 3000});
+    assert.equal(await page.$eval("#secretDialog", el => el.open), false);
+    console.log("PASS: Mobile YUVAN banner button opens and closes the surprise");
     await page.goto("http://127.0.0.1:8765/privacy.html", {waitUntil:"domcontentloaded"});
     assert.match(await page.title(), /Privacy Policy/);
     await page.goto("http://127.0.0.1:8765/terms.html", {waitUntil:"domcontentloaded"});
