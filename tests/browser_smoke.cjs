@@ -77,7 +77,9 @@ let browser;
     console.log("PASS: Mobile viewport, opening and closing accessible navigation");
     await page.click("#topReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true, "Mobile YUVAN reveal must be usable");
+    await pause(350); // allow smooth scroll to settle after navigating back from #worlds
     await page.click("#closeDialog");
+    await page.waitForFunction(() => !document.getElementById("secretDialog").open, {timeout: 3000});
     assert.equal(await page.$eval("#secretDialog", el => el.open), false);
     console.log("PASS: Mobile YUVAN banner button opens and closes the surprise");
     await page.goto("http://127.0.0.1:8765/privacy.html", {waitUntil:"domcontentloaded"});
