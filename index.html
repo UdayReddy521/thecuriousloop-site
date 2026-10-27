@@ -9,6 +9,7 @@
 <meta property="og:image" content="https://thecuriousloop.in/social-preview.svg">
 <meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://thecuriousloop.in/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+<script src="/quest.js" defer></script>
 <script src="/script.js" defer></script><title>The Curious Loop — Stay Wonderfully Curious</title>
 </head><body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -23,7 +24,7 @@
 <div class="constellation-banner container" aria-label="Star Quest mystery challenge">
   <span class="banner-star" aria-hidden="true">✦</span>
   <div class="banner-text"><strong>STAR QUEST</strong><span>FIVE HIDDEN STARS · ONE SECRET CONSTELLATION</span></div>
-  <button type="button" class="banner-open" id="topReveal">REVEAL THE SECRET <span aria-hidden="true">↗</span></button>
+  <button type="button" class="banner-open" id="topReveal">START THE QUEST <span aria-hidden="true">↗</span></button>
 </div>
 <section class="hero container" aria-labelledby="heroTitle"><div class="hero-copy">
 <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> WELCOME TO THE WONDERVERSE</p>
@@ -34,7 +35,7 @@
   <div class="dedication-intro"><span class="dedication-spark" aria-hidden="true">✦</span><span>A LITTLE MYSTERY AWAITS</span><span class="dedication-orbit" aria-hidden="true">✧</span></div>
   <h2 id="yuvanDedicationTitle" class="dedication-name quest-name">STAR QUEST<span aria-hidden="true">.</span></h2>
   <p class="dedication-meaning">FIVE STARS. ONE SECRET.<br>A SURPRISE WRITTEN IN THE STARS.</p>
-  <button id="revealYuvan" type="button" class="dedication-reveal"><span aria-hidden="true">✦</span> Reveal the hidden message <span aria-hidden="true">↗</span></button>
+  <button id="revealYuvan" type="button" class="dedication-reveal"><span aria-hidden="true">✦</span> Play the star quest <span aria-hidden="true">↗</span></button>
   <a class="dedication-discover" href="#secret">Or play the five-star hunt <span aria-hidden="true">↓</span></a>
 </aside>
 <p class="hero-note">✦ ✳ ✧ &nbsp; Big ideas. Tiny sparks. Infinite curiosity.</p>
@@ -108,12 +109,55 @@
 <div class="studio-step"><span>↗</span><div><small>04 / SHARE</small><strong>Put curiosity out there.</strong><p>Authorized publishing when content is ready.</p></div></div>
 </div></div></section>
 
-<section class="section container secret-section" id="secret" aria-labelledby="secretHeading"><div class="secret-card" data-reveal><div class="secret-deco" aria-hidden="true">✷</div><p class="section-kicker">PSSST… THERE'S MORE.</p><h2 id="secretHeading">Every universe has<br><em>a little secret.</em></h2><p>Five hidden stars are waiting for you. Find all five to unlock the constellation, or reveal the surprise with one tap.</p><div class="constellation-display" aria-label="Hidden constellation progress"><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span></div><p id="puzzleStatus" class="puzzle-status" role="status" aria-live="polite">0 of 5 stars discovered</p><button class="puzzle-reveal" type="button" id="puzzleReveal">✦ Reveal the surprise ↗</button><button class="hint-button" type="button" id="hintButton">Need a clue? ↗</button><p id="puzzleHint" class="puzzle-hint" hidden>First clue: search near the giant planet at the top.</p></div></section>
+<section class="section container secret-section" id="secret" aria-labelledby="secretHeading"><div class="secret-card" data-reveal><div class="secret-deco" aria-hidden="true">✷</div><p class="section-kicker">PSSST… THERE'S MORE.</p><h2 id="secretHeading">Every universe has<br><em>a little secret.</em></h2><p>Collect five starlights to draw a secret constellation. Tap the stars here, or hunt for the hidden stars across the website. Earn a bonus in Star Catcher, too!</p><div class="constellation-display" aria-label="Hidden constellation progress"><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span><i></i><span class="constellation-slot">✦</span></div><p id="puzzleStatus" class="puzzle-status" role="status" aria-live="polite">0 of 5 stars discovered</p><button class="puzzle-reveal" type="button" id="puzzleReveal">✦ Play Star Quest ↗</button><button class="hint-button" type="button" id="hintButton">Need a clue? ↗</button><p id="puzzleHint" class="puzzle-hint" hidden>First clue: search near the giant planet at the top.</p></div></section>
 
 <section class="section container transparency-section" id="transparency" aria-labelledby="transparencyHeading"><div class="transparency-inner" data-reveal><div><p class="section-kicker">A LITTLE TRANSPARENCY GOES A LONG WAY</p><h2 id="transparencyHeading">Creating responsibly.<br><em>Sharing thoughtfully.</em></h2><p>Curious Engine is a private YouTube publishing tool for the channel owner and authorized operators. Google authorization helps verify channel identity, inspect uploads, upload finished videos and manage publishing details.</p><p>We do not request Gmail, Contacts, Calendar or unrelated Google account access. Operators can revoke access through Google.</p><div class="policy-links"><a href="/privacy.html">Privacy policy ↗</a><a href="/terms.html">Terms of service ↗</a></div></div><div class="trust-visual" aria-hidden="true"><i></i><i></i><span>✧</span><small>IDEAS WITH CARE</small></div></div><button class="hidden-spark privacy-secret" type="button" data-letter="N" aria-label="Discover a hidden constellation symbol near our values">✧</button></section>
 
 <section class="section container contact-section" id="contact" aria-labelledby="contactHeading" data-reveal><div class="contact-orb" aria-hidden="true">✦</div><p class="section-kicker">THE UNIVERSE IS BETTER WHEN SHARED</p><h2 id="contactHeading">Got a curious <em>thought?</em></h2><p>A question, a story idea, or just a hello? We'd love to hear from you.</p><a class="btn btn-light" href="mailto:thecuriousloop.ai@gmail.com?subject=Hello%20from%20the%20Wonderverse">Say hello ↗</a><small>No signup. No inbox games. Just a real hello.</small></section>
 </main>
 <footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="footer-brand" href="#top">the curious <b>loop.</b></a><p>Stay wonderfully curious. Always.</p></div><div class="footer-links"><a href="#worlds">Our worlds</a><a href="#play">Play</a><a href="#founder">Founder</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:thecuriousloop.ai@gmail.com">Contact</a></div></div><div class="footer-bottom"><span>© <span id="footerYear">2026</span> The Curious Loop · MiraVana Studio · Curious Engine</span><span>MADE WITH WONDER ✳ & A LITTLE STARDUST</span></div></div></footer>
-<dialog id="secretDialog" class="secret-dialog" aria-labelledby="revealTitle" aria-describedby="revealDesc"><button type="button" class="dialog-close-x" id="closeDialogX" aria-label="Close the constellation surprise">×</button><div class="dialog-content"><p class="section-kicker">CONSTELLATION UNLOCKED</p><div class="reveal-word" id="revealTitle">Y U V A N</div><p id="revealDesc">Young Universe. Vast Adventures. Never-ending wonder.</p><p class="reveal-subline">A tiny secret hidden in a big universe—just for the curious at heart. ✨</p><button type="button" class="btn btn-primary" id="closeDialog">Keep exploring ↗</button></div></dialog>
+<dialog id="secretDialog" class="secret-dialog quest-dialog" aria-labelledby="questTitle" aria-describedby="questDescription">
+  <button type="button" class="dialog-close-x" id="closeDialogX" aria-label="Close Star Quest">×</button>
+  <div class="quest-content">
+    <div class="quest-heading">
+      <p class="section-kicker">THE LITTLE CONSTELLATION ADVENTURE</p>
+      <h2 id="questTitle">STAR <em>QUEST.</em></h2>
+      <p id="questDescription">Tap each glowing star to connect the constellation. Five stars hide one special surprise.</p>
+    </div>
+    <div id="questStage" class="quest-stage">
+      <div id="questMap" class="quest-map" role="group" aria-label="Five interactive constellation stars">
+        <svg class="quest-lines" viewBox="0 0 600 280" preserveAspectRatio="none" aria-hidden="true">
+          <path data-quest-line="1" d="M84 156 L192 65"></path>
+          <path data-quest-line="2" d="M192 65 L310 145"></path>
+          <path data-quest-line="3" d="M310 145 L434 65"></path>
+          <path data-quest-line="4" d="M434 65 L521 185"></path>
+        </svg>
+        <button type="button" class="quest-star" data-star-index="0" aria-label="Collect constellation star 1" aria-pressed="false" style="--star-x:14%;--star-y:56%"><span aria-hidden="true">✦</span><small>01</small></button>
+        <button type="button" class="quest-star" data-star-index="1" aria-label="Collect constellation star 2" aria-pressed="false" style="--star-x:32%;--star-y:23%"><span aria-hidden="true">✦</span><small>02</small></button>
+        <button type="button" class="quest-star" data-star-index="2" aria-label="Collect constellation star 3" aria-pressed="false" style="--star-x:52%;--star-y:52%"><span aria-hidden="true">✦</span><small>03</small></button>
+        <button type="button" class="quest-star" data-star-index="3" aria-label="Collect constellation star 4" aria-pressed="false" style="--star-x:72.5%;--star-y:23%"><span aria-hidden="true">✦</span><small>04</small></button>
+        <button type="button" class="quest-star" data-star-index="4" aria-label="Collect constellation star 5" aria-pressed="false" style="--star-x:87%;--star-y:66%"><span aria-hidden="true">✦</span><small>05</small></button>
+      </div>
+      <div class="quest-progress">
+        <div class="quest-progress-copy"><strong id="questCounter">0 / 5 STARS</strong><span id="questLive" role="status" aria-live="polite">Your adventure starts here. Tap a glowing star!</span></div>
+        <div class="quest-progress-track" role="progressbar" aria-label="Star Quest completion" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="questProgressBar"><span id="questProgressFill"></span></div>
+      </div>
+      <div class="quest-footactions">
+        <button type="button" id="questReset" class="quest-subtle">↻ Start over</button>
+        <button type="button" id="closeDialog" class="quest-subtle">Explore the universe ↗</button>
+      </div>
+    </div>
+    <div id="questCompleted" class="quest-completed" hidden>
+      <div class="quest-confetti" aria-hidden="true"><i>✦</i><i>✳</i><i>✧</i><i>✦</i><i>✳</i><i>✧</i><i>✦</i><i>✳</i><i>✧</i><i>✦</i></div>
+      <p class="section-kicker">CONSTELLATION UNLOCKED</p>
+      <div class="reveal-word" id="revealTitle" aria-label="YUVAN"><span>Y</span> <span>U</span> <span>V</span> <span>A</span> <span>N</span></div>
+      <p id="revealDesc" class="reveal-description">Young Universe. Vast Adventures. Never-ending wonder.</p>
+      <p class="reveal-subline">A little secret tucked into this big universe, just for the curious at heart. ✨</p>
+      <div class="quest-complete-actions">
+        <button type="button" id="questReplay" class="quest-subtle">↻ Play again</button>
+        <button type="button" class="btn btn-primary" id="closeQuestCompleted">Keep exploring ↗</button>
+      </div>
+    </div>
+  </div>
+</dialog>
 </body></html>
