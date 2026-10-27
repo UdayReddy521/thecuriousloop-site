@@ -27,9 +27,12 @@ let browser;
     assert.equal(await page.$eval("#founder", el => el.textContent.includes("Uday Reddy")), true);
     assert.equal(await page.$eval("#panel-science", el => el.hidden), false);
 
-    // Visible at the TOP of the page, no need to guess which tiny stars to click.
-    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("YUVAN")), true);
-    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("NEVER-ENDING WONDER")), true);
+    // The banner is clear and clickable but must not spoil the YUVAN surprise.
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("STAR QUEST")), true);
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("FIVE HIDDEN STARS")), true);
+    assert.equal(await page.$eval(".constellation-banner", el => el.textContent.includes("YUVAN")), false);
+    assert.equal(await page.$eval(".hero-dedication", el => el.textContent.includes("YUVAN")), false);
+    assert.equal(await page.$eval("#secretDialog", el => el.open), false);
     await page.click("#topReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true);
     assert.match(await page.$eval("#revealTitle", el => el.textContent), /Y U V A N/);
@@ -40,7 +43,7 @@ let browser;
     await page.click("#planetReveal");
     assert.equal(await page.$eval("#secretDialog", el => el.open), true);
     await page.click("#closeDialog");
-    console.log("PASS: Top YUVAN ribbon, dedication button and interactive planet all open the surprise");
+    console.log("PASS: Spoiler-free Star Quest banner, mystery button and interactive planet reveal YUVAN");
 
     await page.click("#tab-tech");
     assert.equal(await page.$eval("#tab-tech", el => el.getAttribute("aria-selected")), "true");
