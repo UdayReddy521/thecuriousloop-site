@@ -11,6 +11,8 @@ on:
       - "terms.html"
       - "favicon.svg"
       - "social-preview.svg"
+      - "studio-status.html"
+      - "production-status.json"
       - "tests/site_checks.py"
       - "tests/browser_smoke.cjs"
       - ".github/workflows/site-quality.yml"
@@ -23,6 +25,8 @@ on:
       - "quest.js"
       - "privacy.html"
       - "terms.html"
+      - "studio-status.html"
+      - "production-status.json"
       - "tests/site_checks.py"
       - "tests/browser_smoke.cjs"
       - ".github/workflows/site-quality.yml"
@@ -49,6 +53,23 @@ jobs:
           node --check quest.js
       - name: Pages, navigation, accessibility and mini-game asset checks
         run: python tests/site_checks.py
+      - name: Validate public Studio Pulse snapshot has no credentials
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("production-status.json").read_text())
+          assert data["visibility"]=="public"
+          assert data["private_details_included"] is False
+          assert len(data["channels"])==2
+          assert {c["id"] for c in data["channels"]}=={"the_curious_loop","miravana"}
+          site=Path("studio-status.html").read_text()
+          assert "production-status.json" in site
+          raw=Path("production-status.json").read_text().lower()
+          for forbidden in ("oauth_token","api_key","secret_key","credit_balance","private_repo_url","personal_email"):
+              assert forbidden not in raw
+          print("Safe public snapshot schema and two-channel status page verified")
+          PY
       - name: Verify Chrome is present
         run: |
           CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
