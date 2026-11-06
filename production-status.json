@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-06T02:21:11.126Z",
+  "updated_utc": "2026-11-06T02:25:52.150Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -13,7 +13,8 @@
       "summary": "Research and narration plans are prepared. The next finished Short still needs original reviewed moving scenes.",
       "next": "Review scene-specific footage and licensing; render a full 20–30 second original Short and pass editorial QC.",
       "public_video_status": "No new public video verified in this snapshot.",
-      "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw"
+      "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
+      "last_production_check_utc": "2026-11-05T18:15:47.406495+00:00"
     },
     {
       "id": "miravana",
@@ -24,7 +25,8 @@
       "summary": "Original story and character reference are prepared. Genuine 3D motion and scene continuity require review.",
       "next": "Validate headless Blender animation preview, complete character-consistent moving scenes, then render a 25–35 second Short.",
       "public_video_status": "No new public video verified in this snapshot.",
-      "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA"
+      "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
+      "last_production_check_utc": "2026-11-05T09:43:17.087100+00:00"
     }
   ],
   "pipeline": [
