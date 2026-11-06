@@ -51,6 +51,7 @@ function card(data){
  const rail=element('div','rail');rail.setAttribute('aria-label','Production stage: '+(data.stage||'unknown'));
  for(let i=0;i<6;i++){const s=element('span',i<Number(data.stage_index)?'completed':i===Number(data.stage_index)?'current':'');rail.append(s);}article.append(rail);
  const next=element('p','next');next.append(element('b','','Next: '),document.createTextNode(data.next||'Check again after the next sync'));article.append(next);
+ if(data.last_production_check_utc){const t=new Date(data.last_production_check_utc);if(!Number.isNaN(t.getTime()))article.append(element('p','published','Last recorded production check: '+t.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})));}
  article.append(element('p','published',data.public_video_status||'No current public upload data.'));
  const a=element('a','channel','Visit channel ↗');a.href=safeUrl(data.channel_url);a.target='_blank';a.rel='noopener noreferrer';article.append(a);
  return article;
