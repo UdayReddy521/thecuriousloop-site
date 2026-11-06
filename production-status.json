@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-06T02:35:09.984Z",
+  "updated_utc": "2026-11-06T07:26:40.926Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -19,14 +19,14 @@
     {
       "id": "miravana",
       "name": "MiraVana Studio",
-      "status": "review_running",
-      "stage": "Private 3D preview underway",
+      "status": "needs_assets",
+      "stage": "Original 3D preview blocked",
       "stage_index": 2,
-      "summary": "A new no-video-credit Blender scene preview is running; actual moving MP4 quality remains to be verified.",
-      "next": "Validate genuine 3D motion and preserve the private playable preview. Complete character-consistent story scenes before publication.",
+      "summary": "The latest original 3D review attempt ended before scene rendering. No new moving preview was verified.",
+      "next": "Retry the original 3D preview, inspect playable animation, then complete scene review before QC.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-06T02:25:29+00:00"
+      "last_production_check_utc": "2026-11-05T09:43:17.087100+00:00"
     }
   ],
   "pipeline": [
