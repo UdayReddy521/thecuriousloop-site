@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-06T02:25:52.150Z",
+  "updated_utc": "2026-11-06T02:35:09.984Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -8,25 +8,25 @@
       "id": "the_curious_loop",
       "name": "The Curious Loop",
       "status": "needs_assets",
-      "stage": "Visual asset recovery",
+      "stage": "Asset recovery running",
       "stage_index": 2,
-      "summary": "Research and narration plans are prepared. The next finished Short still needs original reviewed moving scenes.",
-      "next": "Review scene-specific footage and licensing; render a full 20–30 second original Short and pass editorial QC.",
+      "summary": "The producer completed a guarded check. Its automatic recovery system is gathering scene-specific footage candidates; final moving media is not yet approved.",
+      "next": "Review and approve relevant source footage, build a complete original Short, then pass narration and rights QC.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-05T18:15:47.406495+00:00"
+      "last_production_check_utc": "2026-11-06T02:27:15.110953+00:00"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
-      "status": "needs_animation",
-      "stage": "3D animation recovery",
+      "status": "review_running",
+      "stage": "Private 3D preview underway",
       "stage_index": 2,
-      "summary": "Original story and character reference are prepared. Genuine 3D motion and scene continuity require review.",
-      "next": "Validate headless Blender animation preview, complete character-consistent moving scenes, then render a 25–35 second Short.",
+      "summary": "A new no-video-credit Blender scene preview is running; actual moving MP4 quality remains to be verified.",
+      "next": "Validate genuine 3D motion and preserve the private playable preview. Complete character-consistent story scenes before publication.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-05T09:43:17.087100+00:00"
+      "last_production_check_utc": "2026-11-06T02:25:29+00:00"
     }
   ],
   "pipeline": [
