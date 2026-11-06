@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-06T07:26:40.926Z",
+  "updated_utc": "2026-11-06T11:47:21Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -10,11 +10,11 @@
       "status": "needs_assets",
       "stage": "Asset recovery running",
       "stage_index": 2,
-      "summary": "The producer completed a guarded check. Its automatic recovery system is gathering scene-specific footage candidates; final moving media is not yet approved.",
-      "next": "Review and approve relevant source footage, build a complete original Short, then pass narration and rights QC.",
+      "summary": "The latest producer check completed, but no fully reviewed moving scene assets are ready for a new video.",
+      "next": "Review and approve scene-specific footage, then assemble and quality-check a complete original video.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-06T02:27:15.110953+00:00"
+      "last_production_check_utc": "2026-11-06T09:39:29.343810+00:00"
     },
     {
       "id": "miravana",
@@ -22,11 +22,11 @@
       "status": "needs_assets",
       "stage": "Original 3D preview blocked",
       "stage_index": 2,
-      "summary": "The latest original 3D review attempt ended before scene rendering. No new moving preview was verified.",
-      "next": "Retry the original 3D preview, inspect playable animation, then complete scene review before QC.",
+      "summary": "The latest producer check completed preflight without verified, approved original 3D moving clips.",
+      "next": "Complete and review original 3D motion clips before video assembly and quality checks.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-05T09:43:17.087100+00:00"
+      "last_production_check_utc": "2026-11-06T09:56:16.496463+00:00"
     }
   ],
   "pipeline": [
