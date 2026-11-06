@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d1b">
+<meta name="robots" content="noindex,follow">
+<title>Studio Pulse | The Curious Loop & MiraVana Studio</title>
+<meta name="description" content="Transparent, timestamped overview of the two creative channels' production stages.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:dark;--bg:#080d1b;--panel:#111c32;--edge:#35435e;--muted:#b4bed2;--cyan:#70e5fc;--purple:#b895ff;--warn:#ffd27c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 87% -10%,#2d2353 0%,transparent 40%),var(--bg);color:#f7f8ff;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+header{border-bottom:1px solid #263349;padding:20px max(5vw,20px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}header strong{font-size:20px;letter-spacing:-.04em}header strong span{color:var(--purple)}header nav{display:flex;gap:20px;font-size:14px;flex-wrap:wrap}
+main{width:min(1100px,calc(100% - 40px));margin:52px auto 80px}.eyebrow{font-size:12px;letter-spacing:3px;color:var(--cyan);font-weight:800;margin-bottom:10px}h1{font-size:clamp(36px,5vw,64px);letter-spacing:-.06em;line-height:1.07;margin:0 0 15px}h1 em{color:var(--purple);font-style:normal}p.lead{color:#bdc9dd;max-width:720px;font-size:17px;margin-bottom:24px}.sync{color:var(--muted);font-size:13px;border:1px solid #35435e;background:#121b2e;padding:13px 16px;border-radius:12px;margin-bottom:26px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border:1px solid var(--edge);border-radius:20px;padding:26px;background:linear-gradient(155deg,#17253e,#10192a);min-width:0}
+.card-title{display:flex;justify-content:space-between;align-items:start;gap:10px}.card h2{margin:0;font-size:25px;letter-spacing:-.04em}.pill{color:var(--warn);background:#392d1c;padding:5px 10px;border:1px solid #81613c;border-radius:30px;font-size:11px;font-weight:800;white-space:nowrap}
+.card .stage{font-size:18px;font-weight:700;margin:22px 0 8px}.card p{color:#cad4e4}.next{border-top:1px solid #35435e;padding-top:16px;margin-top:16px}.next b{color:#fff}.published{font-size:13px;color:#b7c7d7}.card a.channel{display:inline-block;margin-top:14px;font-weight:700}
+.rail{display:flex;gap:6px;margin-top:17px}.rail span{height:8px;border-radius:8px;background:#34425d;flex:1}.rail span.completed{background:#6ad6c4}.rail span.current{background:#f2bc74}
+section.info{margin-top:30px;border-radius:20px;padding:24px;background:#10192b;border:1px solid #263958}.info h2{font-size:19px;margin:0 0 12px}.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.steps div{font-size:12px;padding:12px 8px;border-radius:9px;border:1px solid #35435e;color:#c2cee0;text-align:center}
+button{font:inherit;border:1px solid #9a8bd1;background:#372d5f;color:#fff;border-radius:10px;padding:8px 15px;cursor:pointer}
+footer{border-top:1px solid #28384d;color:#b2bfd3;text-align:center;font-size:13px;padding:22px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.steps{grid-template-columns:repeat(3,1fr)}main{margin-top:32px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header><a href="/" style="color:white"><strong>the curious <span>loop.</span></strong></a><nav><a href="/">Home</a><a href="/#worlds">Two channels</a><a href="https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw" target="_blank" rel="noopener noreferrer">YouTube</a></nav></header>
+<main>
+<div class="eyebrow">STUDIO PULSE · BOTH CHANNELS</div>
+<h1>Ideas in <em>motion.</em></h1>
+<p class="lead">Follow our production journey from research to original animation and quality-reviewed videos. This page displays a dated, public-safe status snapshot—not a real-time feed of internal operations.</p>
+<div class="sync" id="sync" aria-live="polite">Loading the last synchronized production snapshot…</div>
+<div class="cards" id="cards">
+<article class="card"><h2>The Curious Loop</h2><p>Fetching saved status…</p></article>
+<article class="card"><h2>MiraVana Studio</h2><p>Fetching saved status…</p></article>
+</div>
+<section class="info"><h2>Production stages</h2><div class="steps"><div>1. Research</div><div>2. Storyboard</div><div>3. Moving media</div><div>4. Assemble</div><div>5. QC & rights</div><div>6. Publish</div></div><p style="color:#b4bed2;font-size:13px;margin-bottom:0">A planned upload is not a finished video. A new release appears on the channel only after final checks and YouTube publication.</p></section>
+<section class="info"><h2>What does “needs assets” mean?</h2><p>It means the next production requires additional, relevant moving footage or animation before a complete video can be assembled. Quality and source rights are checked before release; we do not replace missing scenes with unrelated footage.</p><p style="color:#b4bed2;font-size:13px;margin:0">Updates depend on a confirmed sync from the private production system. If an update becomes old, this page explicitly reports that instead of suggesting the pipeline is live.</p></section>
+</main><footer>© 2026 The Curious Loop · MiraVana Studio. Original stories, thoughtful production.</footer>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const safeUrl=url=>{try {const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www.youtube.com'&&u.pathname.startsWith('/channel/')?u.href:'#';}catch{return '#';}};
+function element(tag,cls,text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=String(text);return node;}
+function card(data){
+ const article=element('article','card');
+ const head=element('div','card-title');head.append(element('h2','',data.name||'Channel'),element('span','pill',data.status==='needs_assets'||data.status==='needs_animation'?'Preparing visuals':data.status||'Checking'));article.append(head);
+ article.append(element('div','stage',data.stage||'Status not available'),element('p','',data.summary||'No verified update.'));
+ const rail=element('div','rail');rail.setAttribute('aria-label','Production stage: '+(data.stage||'unknown'));
+ for(let i=0;i<6;i++){const s=element('span',i<Number(data.stage_index)?'completed':i===Number(data.stage_index)?'current':'');rail.append(s);}article.append(rail);
+ const next=element('p','next');next.append(element('b','','Next: '),document.createTextNode(data.next||'Check again after the next sync'));article.append(next);
+ article.append(element('p','published',data.public_video_status||'No current public upload data.'));
+ const a=element('a','channel','Visit channel ↗');a.href=safeUrl(data.channel_url);a.target='_blank';a.rel='noopener noreferrer';article.append(a);
+ return article;
+}
+async function refresh(){
+ try{
+  const r=await fetch('/production-status.json?cache='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const d=await r.json();if(!Array.isArray(d.channels)||d.channels.length!==2)throw Error('Invalid snapshot');
+  const date=new Date(d.updated_utc);if(Number.isNaN(date.getTime()))throw Error('Missing timestamp');
+  const age=Date.now()-date.getTime();
+  const msg='Last synchronized '+date.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})+(age>4*3600000?' · STALE — check back after next update':' · Saved production state, not live footage');
+  $('sync').textContent=msg;
+  const nodes=d.channels.map(card);$('cards').replaceChildren(...nodes);
+ }catch(e){$('sync').textContent='Status unavailable — previous information may be outdated. Please check the channel pages for public videos.';}
+}
+refresh();setInterval(refresh,60000);
+})();
+</script>
+</body></html>
