@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-07T11:05:15Z",
+  "updated_utc": "2026-11-07T15:17:06Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -20,10 +20,10 @@
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Original 3D preview blocked",
+      "stage": "Original 3D preview under review",
       "stage_index": 2,
-      "summary": "The latest producer check completed preflight without verified, approved original 3D moving clips.",
-      "next": "Produce and review original character-consistent 3D motion clips before assembly and quality checks.",
+      "summary": "A private 8-second original character-animation preview was verified playable in the video-generation project. Additional generated clips still need independent playback, continuity and rights review; no complete approved Short exists.",
+      "next": "Inspect and archive actual 3D motion clips, reconcile generation records, finish missing scenes, then assemble and quality-check the full story before any release.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
       "last_production_check_utc": "2026-11-07T09:17:30.834980+00:00"
