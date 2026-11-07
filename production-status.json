@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-07T02:34:15Z",
+  "updated_utc": "2026-11-07T11:05:15Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
   "channels": [
@@ -11,10 +11,10 @@
       "stage": "Internal quality review and asset recovery",
       "stage_index": 4,
       "summary": "An original animated Short has reached internal technical review, but editorial approval is pending. The regular production queue still needs reviewed visual assets.",
-      "next": "Complete full video quality, source and caption review while recovering rights-reviewed footage for the next original episode.",
+      "next": "Finish full editorial, captions, visual and rights review of the privately staged Short; recover reviewed assets for the next queued episode.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-06T17:40:18.605476+00:00"
+      "last_production_check_utc": "2026-11-07T09:02:19.007355+00:00"
     },
     {
       "id": "miravana",
@@ -23,10 +23,10 @@
       "stage": "Original 3D preview blocked",
       "stage_index": 2,
       "summary": "The latest producer check completed preflight without verified, approved original 3D moving clips.",
-      "next": "Complete and review original 3D motion clips before video assembly and quality checks.",
+      "next": "Produce and review original character-consistent 3D motion clips before assembly and quality checks.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-06T09:56:16.496463+00:00"
+      "last_production_check_utc": "2026-11-07T09:17:30.834980+00:00"
     }
   ],
   "pipeline": [
