@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-08T02:16:21Z",
+  "updated_utc": "2026-11-08T11:13:23Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized saved production status checked against latest completed producer runs. This is not a live private GitHub feed or proof of a new public upload.",
   "channels": [
@@ -14,7 +14,7 @@
       "next": "Finish caption, narration-to-visual, factual and rights checks; recover approved original motion for queued scenes.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-07T16:37:45.764453+00:00"
+      "last_production_check_utc": "2026-11-08T09:19:31.102896+00:00"
     },
     {
       "id": "miravana",
@@ -26,7 +26,7 @@
       "next": "Verify complete playable character-animated clips, continuity, narration and captions before assembling a private full episode.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-07T09:17:30.834980+00:00"
+      "last_production_check_utc": "2026-11-08T09:34:34.281618+00:00"
     }
   ],
   "pipeline": [
