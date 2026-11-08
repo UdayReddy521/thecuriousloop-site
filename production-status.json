@@ -1,29 +1,29 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-07T15:17:06Z",
+  "updated_utc": "2026-11-08T02:16:21Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "This public page shows only the most recent saved status, not a live video-processing stream. It is not connected to private GitHub jobs without a separate authorized synchronization.",
+  "refresh_note": "Sanitized saved production status checked against latest completed producer runs. This is not a live private GitHub feed or proof of a new public upload.",
   "channels": [
     {
       "id": "the_curious_loop",
       "name": "The Curious Loop",
       "status": "needs_assets",
-      "stage": "Internal quality review and asset recovery",
+      "stage": "Private video editorial review; regular queue needs reviewed assets",
       "stage_index": 4,
-      "summary": "An original animated Short has reached internal technical review, but editorial approval is pending. The regular production queue still needs reviewed visual assets.",
-      "next": "Finish full editorial, captions, visual and rights review of the privately staged Short; recover reviewed assets for the next queued episode.",
+      "summary": "A Short has reached private technical review, but full editorial quality approval is pending. The regular science queue still lacks rights-reviewed scene assets.",
+      "next": "Finish caption, narration-to-visual, factual and rights checks; recover approved original motion for queued scenes.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-07T09:02:19.007355+00:00"
+      "last_production_check_utc": "2026-11-07T16:37:45.764453+00:00"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Original 3D preview under review",
+      "stage": "Original character animation assets under review",
       "stage_index": 2,
-      "summary": "A private 8-second original character-animation preview was verified playable in the video-generation project. Additional generated clips still need independent playback, continuity and rights review; no complete approved Short exists.",
-      "next": "Inspect and archive actual 3D motion clips, reconcile generation records, finish missing scenes, then assemble and quality-check the full story before any release.",
+      "summary": "Character-animation previews are not a finished approved Short. Regular production still needs consistent, reviewed moving scene clips.",
+      "next": "Verify complete playable character-animated clips, continuity, narration and captions before assembling a private full episode.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
       "last_production_check_utc": "2026-11-07T09:17:30.834980+00:00"
