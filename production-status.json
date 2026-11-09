@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-09T15:47:42.656Z",
+  "updated_utc": "2026-11-09T18:20:00Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Sanitized snapshot of latest verified producer checks. Private previews and successful workflows do not establish a public YouTube upload.",
+  "refresh_note": "Public-safe sync of November 9 verified records; the timestamp is a record update, not live footage or proof of new publication.",
   "channels": [
     {
       "id": "the_curious_loop",
@@ -20,13 +20,13 @@
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Original 3D preview under review; separate Shorts public verified",
+      "stage": "3D source clips acquired; red-ball story awaiting remaining scenes",
       "stage_index": 2,
-      "summary": "Three separate Shorts were verified public on November 9. The original character-animation preview remains under review and is not an approved completed 3D video.",
-      "next": "Continue reviewing the private original 3D preview and recover approved character-consistent scene clips.",
+      "summary": "Three previously uploaded Shorts verified PUBLIC on Nov 9. Four original MiraVana Flow clip files imported for private review; an additional boy-and-ball scene was generated in Flow, but its MP4 is NOT yet stored in the editing pipeline.",
+      "next": "Export and ingest the newly generated boy scene, create distinct ball-return/goodbye action, finish narration/edit/QC; publish only after the complete original animation passes review.",
       "public_video_status": "Three separate Shorts verified public November 9, 2026; no new 3D production release verified.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-09T10:25:55.251297+00:00"
+      "last_production_check_utc": "2026-11-09T15:35:23Z"
     }
   ],
   "pipeline": [
