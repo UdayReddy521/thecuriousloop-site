@@ -1,32 +1,32 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-09T03:54:28Z",
+  "updated_utc": "2026-11-09T11:53:35.067Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Sanitized saved production status checked against latest completed producer runs. This is not a live private GitHub feed or proof of a new public upload.",
+  "refresh_note": "Sanitized snapshot of latest verified producer checks. Private previews and successful workflows do not establish a public YouTube upload.",
   "channels": [
     {
       "id": "the_curious_loop",
       "name": "The Curious Loop",
       "status": "needs_assets",
-      "stage": "Private video editorial review; regular queue needs reviewed assets",
+      "stage": "Private staging QC; regular queue in asset recovery",
       "stage_index": 4,
-      "summary": "A Short has reached private technical review, but full editorial quality approval is pending. The regular science queue still lacks rights-reviewed scene assets.",
-      "next": "Finish caption, narration-to-visual, factual and rights checks; recover approved original motion for queued scenes.",
+      "summary": "A privately staged Short awaits editorial review. The regular production queue still needs approved scene media.",
+      "next": "Review private video captions, narration-to-visual sync, facts and rights; recover reviewed assets for the regular queue.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-08T16:46:43.857307+00:00"
+      "last_production_check_utc": "2026-11-09T10:03:51.823637+00:00"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Original character animation assets under review",
+      "stage": "Original 3D preview under review; asset recovery",
       "stage_index": 2,
-      "summary": "Character-animation previews are not a finished approved Short. Regular production still needs consistent, reviewed moving scene clips.",
-      "next": "Verify complete playable character-animated clips, continuity, narration and captions before assembling a private full episode.",
+      "summary": "Original character-animation preview is not an approved finished video. Complete consistent animated scenes and scene details are still missing.",
+      "next": "Review the existing private 3D rough cut for motion, continuity, narration and captions; recover remaining approved scene clips.",
       "public_video_status": "No new public video verified in this snapshot.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-08T09:34:34.281618+00:00"
+      "last_production_check_utc": "2026-11-09T10:25:55.251297+00:00"
     }
   ],
   "pipeline": [
