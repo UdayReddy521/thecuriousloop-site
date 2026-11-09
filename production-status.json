@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-09T11:53:35.067Z",
+  "updated_utc": "2026-11-09T15:47:42.656Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized snapshot of latest verified producer checks. Private previews and successful workflows do not establish a public YouTube upload.",
   "channels": [
@@ -20,11 +20,11 @@
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Original 3D preview under review; asset recovery",
+      "stage": "Original 3D preview under review; separate Shorts public verified",
       "stage_index": 2,
-      "summary": "Original character-animation preview is not an approved finished video. Complete consistent animated scenes and scene details are still missing.",
-      "next": "Review the existing private 3D rough cut for motion, continuity, narration and captions; recover remaining approved scene clips.",
-      "public_video_status": "No new public video verified in this snapshot.",
+      "summary": "Three separate Shorts were verified public on November 9. The original character-animation preview remains under review and is not an approved completed 3D video.",
+      "next": "Continue reviewing the private original 3D preview and recover approved character-consistent scene clips.",
+      "public_video_status": "Three separate Shorts verified public November 9, 2026; no new 3D production release verified.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
       "last_production_check_utc": "2026-11-09T10:25:55.251297+00:00"
     }
