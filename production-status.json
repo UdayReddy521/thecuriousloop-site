@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-09T18:20:00Z",
+  "updated_utc": "2026-11-10T03:54:21Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Public-safe sync of November 9 verified records; the timestamp is a record update, not live footage or proof of new publication.",
+  "refresh_note": "Public-safe snapshot synced from verified producer state and latest workflow checks; not live streaming or proof of a new upload.",
   "channels": [
     {
       "id": "the_curious_loop",
@@ -10,21 +10,21 @@
       "status": "needs_assets",
       "stage": "Private staging QC; regular queue in asset recovery",
       "stage_index": 4,
-      "summary": "A privately staged Short awaits editorial review. The regular production queue still needs approved scene media.",
-      "next": "Review private video captions, narration-to-visual sync, facts and rights; recover reviewed assets for the regular queue.",
-      "public_video_status": "No new public video verified in this snapshot.",
+      "summary": "A privately staged Short still needs independent editorial review; the regular queue lacks approved scene media.",
+      "next": "Review private playback, captions, visual accuracy and rights; recover approved scene media before release.",
+      "public_video_status": "No newer public release verified in the latest saved records.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-09T10:03:51.823637+00:00"
+      "last_production_check_utc": "2026-11-09T21:02:27.480177+00:00"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "3D source clips acquired; red-ball story awaiting remaining scenes",
+      "stage": "Original 3D preview under review",
       "stage_index": 2,
-      "summary": "Three previously uploaded Shorts verified PUBLIC on Nov 9. Four original MiraVana Flow clip files imported for private review; an additional boy-and-ball scene was generated in Flow, but its MP4 is NOT yet stored in the editing pipeline.",
-      "next": "Export and ingest the newly generated boy scene, create distinct ball-return/goodbye action, finish narration/edit/QC; publish only after the complete original animation passes review.",
-      "public_video_status": "Three separate Shorts verified public November 9, 2026; no new 3D production release verified.",
+      "summary": "Original animation previews exist, but the complete set of approved, archived scene clips and final edit are not ready.",
+      "next": "Secure the existing preview as a durable MP4, finish missing original animation scenes, then complete final narration and QC.",
+      "public_video_status": "Three Shorts verified PUBLIC on November 9; no newer release verified.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
       "last_production_check_utc": "2026-11-09T15:35:23Z"
     }
