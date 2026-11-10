@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-10T03:54:21Z",
+  "updated_utc": "2026-11-10T11:42:23.806Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Public-safe snapshot synced from verified producer state and latest workflow checks; not live streaming or proof of a new upload.",
   "channels": [
@@ -10,11 +10,11 @@
       "status": "needs_assets",
       "stage": "Private staging QC; regular queue in asset recovery",
       "stage_index": 4,
-      "summary": "A privately staged Short still needs independent editorial review; the regular queue lacks approved scene media.",
-      "next": "Review private playback, captions, visual accuracy and rights; recover approved scene media before release.",
+      "summary": "A privately staged video needs a corrected narrated final edit and editorial review; the regular queue still lacks approved scene media.",
+      "next": "Complete narration and full-playback QC for private staging; review rights and recover approved scene assets.",
       "public_video_status": "No newer public release verified in the latest saved records.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-09T21:02:27.480177+00:00"
+      "last_production_check_utc": "2026-11-10T10:12:49.709748+00:00"
     },
     {
       "id": "miravana",
@@ -22,11 +22,11 @@
       "status": "needs_assets",
       "stage": "Original 3D preview under review",
       "stage_index": 2,
-      "summary": "Original animation previews exist, but the complete set of approved, archived scene clips and final edit are not ready.",
-      "next": "Secure the existing preview as a durable MP4, finish missing original animation scenes, then complete final narration and QC.",
+      "summary": "An original animation preview is playable but not yet durably archived; remaining character-consistent scenes and final edit are incomplete.",
+      "next": "Archive the reviewed animation MP4, finish missing original scenes, then complete narration and final QC.",
       "public_video_status": "Three Shorts verified PUBLIC on November 9; no newer release verified.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-09T15:35:23Z"
+      "last_production_check_utc": "2026-11-10T10:29:41.231203+00:00"
     }
   ],
   "pipeline": [
