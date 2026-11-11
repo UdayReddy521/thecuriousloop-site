@@ -1,32 +1,32 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-11T02:05:22Z",
+  "updated_utc": "2026-11-11T11:12:50Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Public-safe snapshot based on last verified private producer runs, Drive file metadata and authenticated YouTube inventory through Nov 10; static snapshot, not a live feed or editorial approval.",
+  "refresh_note": "Public-safe snapshot of last verified producer states and authenticated YouTube inventory through November 10; not live streaming or editorial approval.",
   "channels": [
     {
       "id": "the_curious_loop",
       "name": "The Curious Loop",
       "status": "needs_assets",
-      "stage": "Existing release in factual review; new scenes in asset recovery",
-      "stage_index": 4,
-      "summary": "The most recent public release requires factual review. New production remains in scene-asset recovery and editorial quality control.",
-      "next": "Resolve release accuracy and complete source, footage, narration and editorial checks before a new upload.",
+      "stage": "Asset recovery",
+      "stage_index": 3,
+      "summary": "The regular production queue is recovering reviewed scene assets. A previously public release separately remains under factual and editorial review.",
+      "next": "Review and approve source media before rendering; complete factual and editorial checks on the existing release.",
       "public_video_status": "A November 9 public release was verified; no newer release confirmed in the latest November 10 authenticated inventory.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-10T18:12:49.806541+00:00"
+      "last_production_check_utc": "2026-11-11T09:43:28.068183+00:00"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "Private video edit in editorial QC",
-      "stage_index": 4,
-      "summary": "A moving animated story edit exists in private review; continuity and final audio-caption checks remain incomplete.",
-      "next": "Resolve character and prop continuity, complete independent editorial review, then confirm any approved public release.",
+      "stage": "QC",
+      "stage_index": 5,
+      "summary": "An original animated private edit is in quality review. Continuity, narration and captions remain unresolved, and the recurring production queue still needs approved motion assets.",
+      "next": "Resolve visual continuity, verify narration and captions, and approve original animated media before any release.",
       "public_video_status": "Three Shorts confirmed public on November 9; no newer public release confirmed in the latest November 10 authenticated inventory.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-10T10:29:41.231203+00:00"
+      "last_production_check_utc": "2026-11-11T09:53:30.467904+00:00"
     }
   ],
   "pipeline": [
