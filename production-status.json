@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-11T11:12:50Z",
+  "updated_utc": "2026-11-12T02:11:38Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Public-safe snapshot of last verified producer states and authenticated YouTube inventory through November 10; not live streaming or editorial approval.",
+  "refresh_note": "Sanitized snapshot from authenticated YouTube privacy inventory checked 2026-11-11 22:10 UTC and producer runs; not live streaming or independent editorial approval.",
   "channels": [
     {
       "id": "the_curious_loop",
@@ -10,11 +10,11 @@
       "status": "needs_assets",
       "stage": "Asset recovery",
       "stage_index": 3,
-      "summary": "The regular production queue is recovering reviewed scene assets. A previously public release separately remains under factual and editorial review.",
-      "next": "Review and approve source media before rendering; complete factual and editorial checks on the existing release.",
-      "public_video_status": "A November 9 public release was verified; no newer release confirmed in the latest November 10 authenticated inventory.",
+      "summary": "Regular production remains in reviewed-media recovery; a new public Short is independently confirmed by authenticated YouTube inventory. Editorial checks remain separate.",
+      "next": "Complete source-rights review for queued scenes; separately review published video quality.",
+      "public_video_status": "One new Short verified PUBLIC on November 11; production queue remains blocked pending reviewed media.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-11T09:43:28.068183+00:00"
+      "last_production_check_utc": "2026-11-11T18:01:53Z"
     },
     {
       "id": "miravana",
@@ -22,11 +22,11 @@
       "status": "needs_assets",
       "stage": "QC",
       "stage_index": 5,
-      "summary": "An original animated private edit is in quality review. Continuity, narration and captions remain unresolved, and the recurring production queue still needs approved motion assets.",
-      "next": "Resolve visual continuity, verify narration and captions, and approve original animated media before any release.",
-      "public_video_status": "Three Shorts confirmed public on November 9; no newer public release confirmed in the latest November 10 authenticated inventory.",
+      "summary": "One new Short is verified PUBLIC, but the regular animated production queue still needs approved consistent motion assets. Public visibility does not establish editorial quality.",
+      "next": "Independently check published Short continuity, captions and child-audience settings; complete reviewed motion assets for the next story.",
+      "public_video_status": "One new Short verified PUBLIC on November 11, in addition to three November 9 Shorts.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-11T09:53:30.467904+00:00"
+      "last_production_check_utc": "2026-11-11T09:53:35Z"
     }
   ],
   "pipeline": [
