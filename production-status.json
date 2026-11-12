@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-12T02:11:38Z",
+  "updated_utc": "2026-11-12T11:07:40Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Sanitized snapshot from authenticated YouTube privacy inventory checked 2026-11-11 22:10 UTC and producer runs; not live streaming or independent editorial approval.",
+  "refresh_note": "Sanitized snapshot of verified November 12 producer-state files; not live streaming or proof of new public uploads.",
   "channels": [
     {
       "id": "the_curious_loop",
@@ -10,23 +10,23 @@
       "status": "needs_assets",
       "stage": "Asset recovery",
       "stage_index": 3,
-      "summary": "Regular production remains in reviewed-media recovery; a new public Short is independently confirmed by authenticated YouTube inventory. Editorial checks remain separate.",
-      "next": "Complete source-rights review for queued scenes; separately review published video quality.",
+      "summary": "Regular production queue is awaiting reviewed assets; prior public release verification is separate from current production.",
+      "next": "Recover and review eligible media before rendering and editorial QC.",
       "public_video_status": "One new Short verified PUBLIC on November 11; production queue remains blocked pending reviewed media.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-11T18:01:53Z"
+      "last_production_check_utc": "2026-11-12T10:04:06Z"
     },
     {
       "id": "miravana",
       "name": "MiraVana Studio",
       "status": "needs_assets",
-      "stage": "QC",
-      "stage_index": 5,
-      "summary": "One new Short is verified PUBLIC, but the regular animated production queue still needs approved consistent motion assets. Public visibility does not establish editorial quality.",
-      "next": "Independently check published Short continuity, captions and child-audience settings; complete reviewed motion assets for the next story.",
+      "stage": "Asset recovery",
+      "stage_index": 3,
+      "summary": "Regular original-animation production is blocked pending complete, reviewed character-motion assets and scene preparation.",
+      "next": "Complete original animated scenes and storyboards, then perform full video QC.",
       "public_video_status": "One new Short verified PUBLIC on November 11, in addition to three November 9 Shorts.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-11T09:53:35Z"
+      "last_production_check_utc": "2026-11-12T10:22:57Z"
     }
   ],
   "pipeline": [
