@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-12T11:07:40Z",
+  "updated_utc": "2026-11-13T03:21:48Z",
   "kind": "public_sanitized_production_snapshot",
-  "refresh_note": "Sanitized snapshot of verified November 12 producer-state files; not live streaming or proof of new public uploads.",
+  "refresh_note": "Sanitized snapshot of latest verified producer-state files; not live streaming or evidence of a new public upload.",
   "channels": [
     {
       "id": "the_curious_loop",
@@ -10,11 +10,11 @@
       "status": "needs_assets",
       "stage": "Asset recovery",
       "stage_index": 3,
-      "summary": "Regular production queue is awaiting reviewed assets; prior public release verification is separate from current production.",
-      "next": "Recover and review eligible media before rendering and editorial QC.",
+      "summary": "Regular production queue remains without an approved ready episode; one render backup is pending.",
+      "next": "Review and recover eligible media, then finish rendering and QC.",
       "public_video_status": "One new Short verified PUBLIC on November 11; production queue remains blocked pending reviewed media.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-12T10:04:06Z"
+      "last_production_check_utc": "2026-11-12T18:34:48Z"
     },
     {
       "id": "miravana",
