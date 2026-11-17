@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-16T11:03:10Z",
+  "updated_utc": "2026-11-17T03:28:04Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized snapshot of latest verified producer-state files; not live streaming or evidence of a new public upload.",
   "channels": [
@@ -14,7 +14,7 @@
       "next": "Review and recover eligible media, then finish rendering and QC.",
       "public_video_status": "One new Short verified PUBLIC on November 11; production queue remains blocked pending reviewed media.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-16T10:00:21Z"
+      "last_production_check_utc": "2026-11-16T20:39:50Z"
     },
     {
       "id": "miravana",
