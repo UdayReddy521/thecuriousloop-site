@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-20T11:18:17Z",
+  "updated_utc": "2026-11-21T03:08:04Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized snapshot of latest verified producer-state files; not live streaming or evidence of a new public upload.",
   "channels": [
@@ -10,11 +10,11 @@
       "status": "needs_assets",
       "stage": "Asset recovery",
       "stage_index": 3,
-      "summary": "Regular production queue has no approved ready episode; one render backup remains pending.",
-      "next": "Review and recover eligible media, then finish rendering and QC.",
+      "summary": "Latest producer check found no approved ready episode in the regular queue; one render backup remains pending.",
+      "next": "Recover eligible media for the pending render and complete QC.",
       "public_video_status": "Three Shorts verified PUBLIC on November 19; regular production remains in asset recovery.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-20T10:17:38Z"
+      "last_production_check_utc": "2026-11-20T18:47:28Z"
     },
     {
       "id": "miravana",
