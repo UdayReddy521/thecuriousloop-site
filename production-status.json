@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23T11:21:11Z",
+  "updated_utc": "2026-11-23T22:12:51Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized snapshot of latest verified producer-state files; not live streaming or evidence of a new public upload.",
   "channels": [
@@ -14,7 +14,7 @@
       "next": "Recover eligible footage for the pending render, then complete QC.",
       "public_video_status": "Three Shorts verified PUBLIC on November 19; regular production remains in asset recovery.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-23T11:00:01Z"
+      "last_production_check_utc": "2026-11-23T22:12:51Z"
     },
     {
       "id": "miravana",
