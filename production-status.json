@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T20:51:26Z",
+  "updated_utc": "2026-11-25T11:46:34Z",
   "kind": "public_sanitized_production_snapshot",
   "refresh_note": "Sanitized snapshot of latest verified producer-state files; not live streaming or evidence of a new public upload.",
   "channels": [
@@ -14,7 +14,7 @@
       "next": "Recover eligible footage for the pending render, then complete QC.",
       "public_video_status": "Three Shorts verified PUBLIC on November 19; regular production remains in asset recovery.",
       "channel_url": "https://www.youtube.com/channel/UCuSK43WMaBRN-ULvEVeSSIw",
-      "last_production_check_utc": "2026-11-24T20:51:26Z"
+      "last_production_check_utc": "2026-11-25T11:33:39Z"
     },
     {
       "id": "miravana",
@@ -26,7 +26,7 @@
       "next": "Recover original animated scenes, complete storyboards and review the assembled video.",
       "public_video_status": "Three Shorts verified PUBLIC on November 19; regular production remains in asset recovery.",
       "channel_url": "https://www.youtube.com/channel/UCpSeEHYHZd1C1oki8TIVPHA",
-      "last_production_check_utc": "2026-11-24T12:57:33Z"
+      "last_production_check_utc": "2026-11-25T11:46:34Z"
     }
   ],
   "pipeline": [
